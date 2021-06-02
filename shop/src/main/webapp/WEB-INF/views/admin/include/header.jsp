@@ -2,5 +2,5 @@
     pageEncoding="UTF-8"%>
 
 <h1 class="title">
-	<a href="/">Hyeon's SHOP</a>
+	<a href="/admin/index">Hyeon's SHOP Admin</a>
 </h1>
