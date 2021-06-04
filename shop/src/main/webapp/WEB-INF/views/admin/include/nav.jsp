@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <ul>
-	<c:if test="${member == null}">
+	<c:if test="${member != null}">
 	 <li>
 	  	<a href="/">일반화면</a>
 	 </li>
