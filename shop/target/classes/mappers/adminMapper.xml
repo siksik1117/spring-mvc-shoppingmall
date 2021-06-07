@@ -18,5 +18,12 @@
 	)
 	SELECT cateName, cateCode, cateCodeRef, LEVEL FROM cte;
 	</select>
-
+	
+	<!-- 상품 등록 -->
+	<insert id="register">
+	insert into tbl_goods (gdsNum, gdsName, cateCode, gdsPrice, gdsStock,gdsDes)
+	values (NEXTVAL(tbl_goods_seq), #{gdsName}, #{cateCode},#{gdsPrice}, #{gdsStock}, #{gdsDes})
+	</insert>
+	
+	
 </mapper>
