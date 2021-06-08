@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.shop.domain.CategoryVO;
 import com.shop.domain.GoodsVO;
@@ -48,6 +49,25 @@ public class AdminController {
 		adminService.register(vo);
 		
 		return "redirect:/admin/index";
+	}
+	
+	//상품 목록
+	@RequestMapping(value="/goods/list", method = RequestMethod.GET)
+	public void getGoodsList(Model model) throws Exception {
+		logger.info("get goods list");
+		
+		List<GoodsVO> list = adminService.goodslist();
+		model.addAttribute("list", list);
+	}
+	
+	//상품 조회
+	@RequestMapping(value="/goods/view", method = RequestMethod.GET)
+	public void getGoodsview(@RequestParam("n") int gdsNum, Model model) throws Exception {
+		logger.info("get goods view");
+		
+		GoodsVO goods = adminService.goodsView(gdsNum);
+		
+		model.addAttribute("goods",goods);
 	}
 
 }
