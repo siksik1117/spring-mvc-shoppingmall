@@ -2,8 +2,8 @@ package com.shop.domain;
 
 import java.util.Date;
 
-public class GoodsVO {
-
+public class GoodsViewVO {
+	
 	private int gdsNum;
 	private String gdsName;
 	private String cateCode;
@@ -12,6 +12,9 @@ public class GoodsVO {
 	private String gdsDes;
 	private String gdsImg;
 	private Date gdsDate;
+	
+	private String cateCodeRef;
+	private String cateName;
 	
 	public int getGdsNum() {
 		return gdsNum;
@@ -61,6 +64,17 @@ public class GoodsVO {
 	public void setGdsDate(Date gdsDate) {
 		this.gdsDate = gdsDate;
 	}
-	
-	
+	public String getCateCodeRef() {
+		return cateCodeRef;
+	}
+	public void setCateCodeRef(String cateCodeRef) {
+		this.cateCodeRef = cateCodeRef;
+	}
+	public String getCateName() {
+		return cateName;
+	}
+	public void setCateName(String cateName) {
+		this.cateName = cateName;
+	}
+
 }
