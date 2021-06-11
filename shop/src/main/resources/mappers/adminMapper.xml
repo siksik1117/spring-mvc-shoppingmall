@@ -55,4 +55,9 @@
     where gdsNum = ${gdsNum}
 	</update>
 	
+	<!-- 상품 삭제 -->
+	<delete id="goodsDelete" parameterType="com.shop.domain.GoodsVO">
+	delete from tbl_goods where gdsNum = #{gdsNum}
+	</delete>
+	
 </mapper>

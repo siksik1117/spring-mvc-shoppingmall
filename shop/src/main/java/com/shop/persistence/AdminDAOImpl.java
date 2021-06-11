@@ -52,4 +52,11 @@ public class AdminDAOImpl implements AdminDAO {
 		
 	}
 
+	//상품 삭제
+	@Override
+	public void goodsDelete(int gdsNum) throws Exception {
+		sql.delete(namespace + ".goodsDelete", gdsNum);
+		
+	}
+
 }

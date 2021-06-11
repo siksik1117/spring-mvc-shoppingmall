@@ -50,4 +50,11 @@ public class AdminServiceImpl implements AdminService {
 		
 	}
 
+	//상품 삭제
+	@Override
+	public void goodsDelete(int gdsNum) throws Exception {
+		dao.goodsDelete(gdsNum);
+		
+	}
+
 }
